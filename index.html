@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <!-- <script src="codelab.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="relative h-screen">
+      <img
+        src="background.jpg"
+        alt="Froggy roasting marshmellow on a cool night."
+        class="w-screen h-screen object-cover object-bottom absolute -z-10"
+      />
+      <div class="bg-[#0d235d]">
+        <input
+          placeholder="Visakhapatnam"
+          class="px-4 w-[90%] py-3 mt-6 mb-2 mx-4 rounded-lg"
+        />
+        <div
+          class="uppercase flex justify-between mx-6 py-4 text-sm text-white"
+        >
+          <div class="flex flex-col items-center">
+            <p>Today</p>
+            <div class="w-12 mt-2 h-[1.5px] bg-white"></div>
+          </div>
+          <p>Tommorow</p>
+          <p>3 Days</p>
+        </div>
+      </div>
+      <div class="text-white my-8 px-8 pb-8 flex justify-between items-end">
+        <div>
+          <h2 class="text-xl" id="date"></h2>
+          <h3 class="opacity-50">
+            Day <span id="max"></span>° Night <span id="min"></span>°
+          </h3>
+          <h1 class="text-7xl flex items-start">
+            <span id="temperature"></span><span class="text-3xl">°C</span>
+          </h1>
+          <p id="feels-like">Feels like °</p>
+        </div>
+        <div>
+          <div class="icon-container partly-cloudy">
+            <img src="cloudy.png" class="w-20 py-4" />
+            <div class="weather-type text-center" id="weather-type">
+              Partly Cloudy
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 bg-black w-screen bg-opacity-50 py-2 px-8">
+        <p class="text-white">
+          <span id="precipitation"></span>% chance of precipitation
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
