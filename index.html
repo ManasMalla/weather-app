@@ -15,12 +15,19 @@
       <img
         src="background.jpg"
         alt="Froggy roasting marshmellow on a cool night."
-        class="w-screen h-screen object-cover object-bottom absolute -z-10"
+        class="w-screen h-screen object-cover object-bottom absolute -z-10 lg:hidden"
       />
-      <div class="bg-[#0d235d]">
+      <img
+        src="beach.jpg"
+        alt="Froggy roasting marshmellow on a cool night."
+        class="w-screen h-screen object-cover object-bottom -z-10 absolute hidden lg:block"
+      />
+      <div class="bg-[#0d235d] lg:bg-black/40">
         <input
+          id="search"
           placeholder="Visakhapatnam"
           class="px-4 w-[90%] py-3 mt-6 mb-2 mx-4 rounded-lg"
+          onkeydown="searchWeather(event)"
         />
         <div
           class="uppercase flex justify-between mx-6 py-4 text-sm text-white"
@@ -33,8 +40,8 @@
           <p>3 Days</p>
         </div>
       </div>
-      <div class="text-white my-8 px-8 pb-8 flex justify-between items-end">
-        <div>
+      <div class="text-white my-8 px-8 pb-8 flex justify-between items-start">
+        <div class="bg-amber-700/70 px-8 py-3 rounded-xl">
           <h2 class="text-xl" id="date"></h2>
           <h3 class="opacity-50">
             Day <span id="max"></span>° Night <span id="min"></span>°
